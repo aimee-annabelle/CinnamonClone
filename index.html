@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="box-border m-0 p-0">
+    <!-- header -->
+    <header class="relative">
+      <div
+        class="flex justify-between top-0 fixed lg:px-80 p-6 place-content-center w-full"
+      >
+        <h1
+          class="text-stone-900 font-bold text-3xl uppercase lg:flex"
+          id="hiddable-logo"
+        >
+          cinnamon
+        </h1>
+        <div class="lg:hidden text-3xl" id="mobile-nav">
+          <div class="flex fixed right-10">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+          <div class="hidden w-[348px] md:w-[790px] flex-col">
+            <div class="flex justify-between items-center">
+              <h1 class="text-stone-900 font-bold text-3xl uppercase">
+                cinnamon
+              </h1>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div
+              class="flex flex-col gap-8 p-8 items-center w-full text-base font-medium"
+            >
+              <a href="" class="text-stone-900">Projects</a
+              ><a href="" class="text-stone-900">Services</a
+              ><a href="" class="text-stone-900">About Us</a
+              ><a href="" class="text-stone-900">Careers</a>
+              <a href="" class="text-stone-900">Blog</a>
+              <a href="" class="text-stone-900">Let's collaborate</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden lg:flex lg:self-center gap-8 font-semibold text-base text-center items-center"
+        >
+          <a href="" class="text-stone-900">Projects</a
+          ><a href="" class="text-stone-900">Services</a
+          ><a href="" class="text-stone-900">About Us</a
+          ><a href="" class="text-stone-900">Careers</a>
+          <a href="" class="text-stone-900">Blog</a>
+          <div
+            class="rounded-full px-4 py-2 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600"
+          >
+            <i class="fa-solid fa-play py-1"></i>
+          </div>
+          <button
+            class="bg-indigo-600 text-white px-5 py-2 hover:bg-white hover:border-2 hover:text-indigo-600 hover:border-indigo-600"
+          >
+            Let's collaborate
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- end of header section -->
+    <section class="lg:mx-40 mt-[15%]">
+      <div class="flex flex-col px-6 lg:px-40 gap-y-10">
+        <h1 class="text-stone-900 font-extrabold text-4xl lg:text-7xl">
+          Results focused design & development agency
+        </h1>
+        <p class="text-stone-900 text-xl lg:w-2/3">
+          Extend your team with our high performing specialists or hire us to
+          shape your product from scratch. Either way, we’ll get your product
+          off the ground and build momentum for your success.
+        </p>
+        <div class="flex flex-col lg:flex-row gap-5">
+          <div class="">
+            <img
+              src="https://www.cinnamon.agency/_next/static/media/deloitte-Logo.5306e5df.svg"
+              alt=""
+              class="h-8"
+            />
+            <p>TOP FAST 50 Central Europe</p>
+            <p>2023</p>
+          </div>
+          <div class="text-base">
+            <img
+              src="https://www.cinnamon.agency/_next/static/media/clutch-logo.e657178f.svg"
+              alt=""
+              class="h-8"
+            />
+            <p class="uppercase">5.0 average review rating</p>
+            <p>Based on 26 reviews</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const mobileNav = document.getElementById("mobile-nav");
+      const bars = mobileNav.firstElementChild;
+      const cross = mobileNav.lastElementChild;
+      const logo = document.getElementById("hiddable-logo");
+      bars.addEventListener("click", () => {
+        bars.classList.add("hidden");
+        logo.classList.add("hidden");
+        cross.classList.remove("hidden");
+        cross.classList.add("flex");
+      });
+      cross.addEventListener("click", () => {
+        cross.classList.add("hidden");
+        logo.classList.remove("hidden");
+        bars.classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
